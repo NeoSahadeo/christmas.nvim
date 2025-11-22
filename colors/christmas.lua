@@ -1,6 +1,5 @@
 -- Christmas Neovim Theme
 
--- Reset highlights
 vim.cmd("hi clear")
 if vim.fn.exists("syntax_on") then
 	vim.cmd("syntax reset")
@@ -9,26 +8,25 @@ end
 vim.o.background = "dark"
 vim.g.colors_name = "christmas"
 
--- Define color palette with clear purpose
 local colors = {
 	-- Background colors
-	bg = "#0a1428",     -- Dark night sky
+	bg = "#0a1428",    -- Dark night sky
 	bg_light = "#1a2a3a", -- Slightly lighter background for UI elements
 
 	-- Foreground colors
-	fg = "#e0e6ed",     -- Light text
+	fg = "#e0e6ed",    -- Light text
 	fg_muted = "#8b95a5", -- Muted/comment text
 
 	-- Christmas palette
-	red = "#ff2e31",       -- Bright red
-	red_dark = "#c41c1e",  -- Dark red for accents
+	red = "#ff2e31",      -- Bright red
+	red_dark = "#c41c1e", -- Dark red for accents
 	red_light = "#ff5558", -- Light red
 
-	green = "#2d9f3e",     -- Christmas green
+	green = "#2d9f3e",    -- Christmas green
 	green_dark = "#1a5c28", -- Dark green
 	green_light = "#3fbd52", -- Light green
 
-	gold = "#f4a460",      -- Gold/orange accent
+	gold = "#f4a460",     -- Gold/orange accent
 	gold_dark = "#d17a2f", -- Dark gold
 	gold_light = "#ffb84d", -- Light gold
 
@@ -38,18 +36,17 @@ local colors = {
 	snow = "#f0f4f8", -- Snow white
 
 	-- UI colors
-	border = "#2a4a6a",    -- Border color
+	border = "#2a4a6a",   -- Border color
 	cursor_line = "#1a3a4a", -- Cursor line background
-	visual = "#2a5a7a",    -- Visual selection
+	visual = "#2a5a7a",   -- Visual selection
 
 	-- Status/diagnostic colors
 	error = "#ff5555", -- Error
 	warning = "#ffb84d", -- Warning/gold
-	info = "#5ea6ff",  -- Info
-	hint = "#7fbfff",  -- Hint
+	info = "#5ea6ff", -- Info
+	hint = "#7fbfff", -- Hint
 }
 
--- Helper function to set highlight group
 local function hl(group, opts)
 	local hl_string = "hi " .. group
 	if opts.fg then
