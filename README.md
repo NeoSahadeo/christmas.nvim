@@ -1,14 +1,16 @@
 # 🎄 Christmas.nvim
 
-A festive Neovim colorscheme to accompany you during Advent of Code.
+A simple festive Neovim colorscheme to accompany you during Advent of Code.
 
 ## Installation
 
 **Lazy:**
 
 ```lua
-return {
-  { "chaserensberger/christmas.nvim" }
+{
+    "chaserensberger/christmas.nvim",
+    name = "christmas",
+    lazy = false,
 }
 ```
 
